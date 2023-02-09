@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { deleteTransaction } from '../features/transactions/transactionsSlice';
-import { ITransaction } from '../interfaces/ITransaction';
+import { ITransactionProps } from '../interfaces/ITransactionProps';
 
-export default function Transaction(props: ITransaction) {
-    const { amount, category, description } = props
+export default function Transaction(props: ITransactionProps) {
+    const { transaction } = props
     const dispatch = useDispatch();
 
     const handleDelete = (e: React.MouseEvent<HTMLElement>) => {
@@ -13,8 +13,8 @@ export default function Transaction(props: ITransaction) {
     return (
         <li className="new-transaction">
             <span>
-                {amount} - {category}{' '}
-                <span className="description">( {description} )</span>
+                {transaction.amount} - {transaction.category}{' '}
+                <span className="description">( {transaction.description} )</span>
             </span>
             <button onClick={handleDelete} aria-label="Remove">
                 X
