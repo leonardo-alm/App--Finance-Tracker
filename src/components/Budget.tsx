@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { editBudget } from '../features/budgets/budgetsSlice';
 import { selectTransactions } from '../features/transactions/transactionsSlice';
-import { IBudget } from '../interfaces/IBudget';
 import { IBudgetProps } from '../interfaces/IBudgetProps';
 
-/* export default function Budget({ category, amount }: IBudget) { */
 export default function Budget({ budget }: IBudgetProps) {
     const dispatch = useDispatch();
     const [amount, setAmount] = useState(budget.amount);

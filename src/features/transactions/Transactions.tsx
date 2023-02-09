@@ -2,7 +2,6 @@ import { useSelector } from 'react-redux';
 import { selectFlattenedTransactions } from './transactionsSlice';
 import TransactionForm from '../../components/TransactionForm';
 import TransactionList from '../../components/TransactionList';
-import { ITransaction } from '../../interfaces/ITransaction';
 
 const Transactions = () => {
     const transactions = useSelector(selectFlattenedTransactions);
