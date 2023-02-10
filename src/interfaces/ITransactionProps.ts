@@ -1,5 +1,5 @@
 import { ITransaction } from "./ITransaction";
 
-export interface ITransactionProps{
+export interface ITransactionProps {
     transaction: ITransaction
 }

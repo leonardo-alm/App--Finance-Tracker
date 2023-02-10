@@ -33,7 +33,7 @@ export default function Budget({ budget }: IBudgetProps) {
         return amount > 0 ? 'positive' : 'negative';
     };
 
-    const remainingFunds = Number((budget.amount - calculateTotalExpenses()).toFixed(2));
+    const remainingFunds = Number((budget.amount - calculateTotalExpenses()));
     const fundsRemainingClassName = getFundsRemainingClassName(remainingFunds);
 
     return (
@@ -42,6 +42,7 @@ export default function Budget({ budget }: IBudgetProps) {
             <div className="category-wrapper">
                 <h3 className="category-value">{budget.category}</h3>
                 <form onSubmit={handleSubmit} className="budget-form">
+                <span>$</span>
                     <input
                         className="amount-input"
                         value={amount}
@@ -53,7 +54,7 @@ export default function Budget({ budget }: IBudgetProps) {
                 </form>
             </div>
             <h4 className={`remaining-funds ${fundsRemainingClassName}`}>
-                Funds Remaining: {remainingFunds}
+                Funds Remaining: $ {remainingFunds.toFixed(2)}
             </h4>
         </li>
     );
