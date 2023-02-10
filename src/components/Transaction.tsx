@@ -7,7 +7,7 @@ export default function Transaction(props: ITransactionProps) {
     const dispatch = useDispatch();
 
     const handleDelete = (e: React.MouseEvent<HTMLElement>) => {
-        dispatch(deleteTransaction(props));
+        dispatch(deleteTransaction(transaction));
     };
 
     return (

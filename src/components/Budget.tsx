@@ -46,7 +46,7 @@ export default function Budget({ budget }: IBudgetProps) {
                         className="amount-input"
                         value={amount}
                         onChange={handleChange}
-                        type="text"
+                        type="number"
                         step="1"
                     />
                     <button className="update-button">Update</button>
