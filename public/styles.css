@@ -70,9 +70,10 @@ input {
     width: 80px;
 }
 
-span{
+span {
     margin-right: 4px;
 }
+
 .update-button {
     padding: 6px 12px;
     border-radius: 6px;
