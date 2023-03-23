@@ -7,7 +7,7 @@ export default function TransactionList(props: ITransactionListProps) {
         <section className="new-transactions-section">
             <h2>Transactions</h2>
             <ul className="new-transaction-list">
-                {transactions.map((t) => (<Transaction transaction={t} />
+                {transactions.map((t) => (<Transaction transaction={t} key={t.id}/>
                 ))}
             </ul>
         </section>

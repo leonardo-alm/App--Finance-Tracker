@@ -42,7 +42,7 @@ export default function Budget({ budget }: IBudgetProps) {
             <div className="category-wrapper">
                 <h3 className="category-value">{budget.category}</h3>
                 <form onSubmit={handleSubmit} className="budget-form">
-                <span>$</span>
+                    <span>$</span>
                     <input
                         className="amount-input"
                         value={amount}

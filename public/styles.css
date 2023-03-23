@@ -118,7 +118,7 @@ span {
     padding-bottom: 38px;
     box-shadow: var(--shadow);
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     box-sizing: border-box;
 }
